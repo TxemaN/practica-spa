@@ -6,7 +6,7 @@ import { CellPage, HomePage, LogInPage, MueblesPage, ProductPage } from "../page
 
 export const AppRouter = () => {
 
-    const state = ''
+    const state = 'logged-out'
     return (
 
 

@@ -4,12 +4,17 @@ import { useFormulario } from '../auth/hooks/useFormulario'
 
 
 export const LogInPage = () => {
-   const {state, handleLogin, handleLogOut}=useFormulario()
+   const {state, handleLogin,handleSubmit}=useFormulario()
   return (
-    <><form onSubmit={handleLogin}  action="">
+    <>
+    <form onSubmit={handleSubmit}  action="">
         
-        <input type="text" name='nombre' id='nombre' placeholder='NOMBRE USUARIO' value={data.nombre}/>
-        <input type="submit"  />
+        <input 
+        type="text" 
+        name='nombre' 
+        id='nombre' 
+        placeholder='NOMBRE USUARIO' />
+        <input type="submit" value='logeado'  />
         
         
         </form></>

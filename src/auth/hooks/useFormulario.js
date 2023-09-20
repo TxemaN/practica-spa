@@ -1,49 +1,50 @@
-import React, { useReducer } from 'react'
-import { logReducer } from '../reducer/logReducer'
-
+import React, { useReducer } from 'react';
+import {logReducer} from '../reducer/logReducer'
 export const useFormulario = () => {
     const initialState = { estado: "logged-out", userName: "" }
-    const [state, dispatch] = useReducer(logReducer, initialState)
+    const [state, dispatch] = useReducer(logReducer, initialState);
 
-
-    const handleLogin = (ev) => {
-        ev.preventDefault()
+    const handleLogin = (userName) => {  
+      
         const newUser = {
             estado: "logeado",
-            username: nombre.value,
-        }
+            userName
+        };
 
         const action = {
             type: 'logged',
             payload: newUser,
-        }
+        };
 
-        dispatch(action)
+        dispatch(action);
+    };
 
-
-    }
     const handleLogOut = () => {
         const newUser = {
             estado: "logged-out",
-            username: "",
-        }
+            username: ""
+        };
 
         const action = {
             type: 'logged-out',
             payload: newUser,
-        }
+        };
 
-        dispatch(action)
+        dispatch(action);
+    };
 
-
-    
-    }
-
+    const handleSubmit = (ev) => {
+        ev.preventDefault();
+        const userName = ev.target.nombre.value;
+        handleLogin(userName);  
+      
+    };
+    console.log(state)
 
     return {
         state,
         handleLogin,
-        handleLogOut
-
+        handleLogOut,
+        handleSubmit
     }
 }
