@@ -25,7 +25,7 @@ export const dummyConsulta = async (url, method, body = {}) => {
     };
 
     try {
-        const resp = await fetch(url, options); // para categorías "/category/${categoria}" ya sea "smartphones" o "home-decoration"
+        const resp = await fetch(url, options); 
 
         if (resp.ok) {
 
