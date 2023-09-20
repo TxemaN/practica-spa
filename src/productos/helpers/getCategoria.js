@@ -15,3 +15,6 @@ export const getCategoria = async (categoria) => {
 
     return products;
 };
+
+const array = [] //borrar
+
