@@ -4,6 +4,7 @@ import { useFormulario } from '../auth/hooks/useFormulario'
 
 
 export const LogInPage = () => {
+
    const { handleSubmit}=useFormulario()
   return (
     <> 
@@ -21,5 +22,6 @@ export const LogInPage = () => {
 
           
           </>
+
   )
 }

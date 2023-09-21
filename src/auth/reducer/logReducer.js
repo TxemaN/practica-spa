@@ -1,19 +1,22 @@
-import React from 'react'
+
 
 export const logReducer = (state, action) => {
+  
     switch (action.type) {
-
-    
         case 'logged':
-            console.log(state, action.payload)
-            return  action.payload
-           
-
-            case 'logged-out':
-                console.log(action.payload)
-                return  action.payload
+            return {
+                ...state,
+                estado: action.payload.estado, 
+                userName: action.payload.userName 
+            };
+        case 'logged-out':
+            return {
+                ...state,
+                estado: 'logged-out',
+                userName: null 
+            };
         default:
-            return state
-
-    }
+            return state;
 }
+}
+

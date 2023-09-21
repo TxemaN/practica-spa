@@ -1,4 +1,5 @@
 
+
 import { logReducer } from '../reducer/logReducer'
 import { UserProvider } from '../../context/UserProvider';
 import { useContext } from 'react';
@@ -43,6 +44,7 @@ export const useFormulario = () => {
         const userName = ev.target.nombre.value;
         handleLogin(userName);
        ev.target.nombre.value = ""
+
 
     };
     console.log(state)
