@@ -1,7 +1,8 @@
-import {link,NavLink} from 'react-router-dom'
+import {Link,NavLink} from 'react-router-dom'
 
-const {title,price,rating,thumbnail,id} =  FETCHDUMMY
+const {title,price,rating,thumbnail,id = 5} =  FETCHDUMMY
 
+ 
 
 export const card = () => {
   return (
@@ -12,7 +13,7 @@ export const card = () => {
         <p>TITLE</p>
         <p>price</p>
         <p>rating</p>
-        <NavLink>Saiba Mas</NavLink>
+        <Link to={`producto/${id}`}> Mas Info </Link>
         
 
 

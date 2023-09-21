@@ -10,7 +10,7 @@ export const AppRouter = () => {
     return (
 
 
-        state === 'logged-out' ? (
+       (state === '')?(
 
             <Routes>
                 <Route path='login' element={<LogInPage />} />
