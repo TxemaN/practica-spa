@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { PintarProducto } from '../productos/components/PintarProducto';
 
 export const ProductPage = () => {
-  return (
-    <div>ProductPage</div>
-  )
-}
+  return <PintarProducto />;
+};

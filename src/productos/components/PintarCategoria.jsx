@@ -1,29 +1,22 @@
+import React from 'react'
+import { useCategoria } from '../hooks/useCategoria';
+import { Card } from './Card'
 
+export const PintarCategoria = ({ categoria }) => {
+    const { products, loading } = useCategoria(categoria);
 
-export const PintarCategoria = () => {
-
-
-    const array = [];
+    if (loading) {
+        return <p>Cargando...</p>;
+    }
 
     return (
         <section>
             <h1>{categoria}</h1>
             {
-                array.map((item) => {
-                    <card />
-                })
-
+                products.map(item =>
+                    <Card key={item.id} {...item} />
+                )
             }
-
-
-
-
-
-
-
-
         </section>
-
-
-    )
+    );
 }

@@ -6,7 +6,7 @@ import { CellPage, HomePage, LogInPage, MueblesPage, ProductPage } from "../page
 
 export const AppRouter = () => {
 
-    const state = 'logged-out'
+    const state = ''
     return (
 
 
@@ -24,7 +24,7 @@ export const AppRouter = () => {
                 <Route path='/' element={<HomePage />} />
                 <Route path='muebles' element={<MueblesPage />} />
                 <Route path='mobile' element={<CellPage />} />
-                <Route path='producto' element={<ProductPage />} />
+                <Route path='producto/:id' element={<ProductPage />} />
                 <Route path='/*' element={<Navigate to='/'/>} />
             </Routes>
 

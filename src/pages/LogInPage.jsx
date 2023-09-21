@@ -1,14 +1,12 @@
 import React from 'react'
-
 import { useFormulario } from '../auth/hooks/useFormulario'
-
 
 export const LogInPage = () => {
 
-   const { handleSubmit}=useFormulario()
+   const { handleSubmit}=useFormulario();
   return (
     <> 
-          <form onSubmit={handleSubmit} action="">
+          <form onSubmit={handleSubmit}>
 
               <input
                   type="text"
@@ -16,12 +14,7 @@ export const LogInPage = () => {
                   id='nombre'
                   placeholder='NOMBRE USUARIO' />
               <input type="submit" value='Login' />
-
-
           </form>
-
-          
           </>
-
-  )
-}
+  );
+};

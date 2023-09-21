@@ -10,8 +10,10 @@ export const getCategoria = async (categoria) => {
     const newProducts = products.map((prod) => ({
         id: prod.id,
         title: prod.title,
+        price: `${prod.price}€`,
         rating: prod.rating,
         thumbnail: prod.thumbnail
+
     }));
 
     return newProducts;

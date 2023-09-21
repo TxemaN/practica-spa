@@ -1,21 +1,16 @@
-import {link,NavLink} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-const {title,price,rating,thumbnail,id} =  FETCHDUMMY
+export const Card = ({ id, title, price, rating, thumbnail }) => {
 
-
-export const card = () => {
-  return (
-    <article>
-        <div>
-            <img src="" alt="" />
-        </div>
-        <p>TITLE</p>
-        <p>price</p>
-        <p>rating</p>
-        <NavLink>Saiba Mas</NavLink>
-        
-
-
-    </article>
-  )
-}
+    return (
+        <article>
+            <div>
+                <img src={thumbnail} alt={title} />
+            </div>
+            <p>{title}</p>
+            <p>{price}</p>
+            <p>{rating}</p>
+            <Link to={`/producto/${id}`} >Más info</Link>
+        </article>
+    );
+};

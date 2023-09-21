@@ -1,44 +1,26 @@
+import React from 'react'
+import { useProducto } from '../hooks/useProducto';
 
+export const PintarProducto = () => {
+    const { product, handleVolver } = useProducto();
 
-export const PintarCategoria = () => {
+    if (!product) return <p>Cargando...</p>;
 
-    const {title,price,rating,thumbnail,id} =  FETCHDUMMY
-    
-    const COSA = () => {
+    const { title, description, price, rating, thumbnail, category } = product;
 
-    }
     return (
-
-
         <section>
             <h1>Producto - {category}</h1>
-            <button onClick={COSA}></button>
-            {
-                <article>
+            <button onClick={handleVolver}>Volver</button>
+            <article>
                 <div>
-                    <img src="" alt="" />
+                    <img src={thumbnail} alt={title} />
                 </div>
-                <h2>TITLE</h2>
-                <p>description</p>
-                <p>price</p>
-                <p>rating</p>
-              
-                
-        
-        
+                <h2>{title}</h2>
+                <p>{description}</p>
+                <p>{price}$</p>
+                <p>{rating}</p>
             </article>
-
-            }
-
-
-
-
-
-
-
-
         </section>
-
-
-    )
-}
+    );
+};

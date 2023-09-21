@@ -4,7 +4,7 @@ export const getProductById = async (id) => {
     const urlBase = import.meta.env.VITE_APP_URL;
     const urlProduct = `${urlBase}/${id}`
 
-    const { data } = await dummyConsulta(urlProduct, 'GET');
+    const { data } = await dummyConsulta(urlProduct);
 
     const product = {
         title: data.title,
