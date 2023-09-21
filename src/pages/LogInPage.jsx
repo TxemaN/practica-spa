@@ -4,7 +4,7 @@ import { useFormulario } from '../auth/hooks/useFormulario'
 
 
 export const LogInPage = () => {
-   const {state, handleLogin,handleSubmit, handleLogOut}=useFormulario()
+   const { handleSubmit}=useFormulario()
   return (
     <> 
           <form onSubmit={handleSubmit} action="">
@@ -19,7 +19,7 @@ export const LogInPage = () => {
 
           </form>
 
-          <button onClick={handleLogOut}>LOGOUT</button>
+          
           </>
   )
 }

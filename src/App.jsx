@@ -1,16 +1,13 @@
-import { useState } from 'react'
-
-import './App.css'
+import { UserProvider } from "./context/UserProvider"
 import { AppRouter } from './routers/AppRouter'
-
 function App() {
-
-
+  
   return (
     <>
-      <AppRouter/>
+    <UserProvider>
+     <AppRouter/>
+     </UserProvider>
     </>
   )
 }
-
 export default App
