@@ -2,6 +2,9 @@ import React from 'react'
 
 export const ProductPage = () => {
   return (
-    <div>ProductPage</div>
+    <div>
+    <NavBar/>
+   <p>Muebles Page</p>
+   </div>
   )
 }

@@ -1,7 +1,15 @@
 import React from 'react'
+import { NavBar } from '../components/NavBar'
 
 export const MueblesPage = () => {
   return (
-    <div>MueblesPage</div>
+    <main>
+    <div>
+
+  
+    <NavBar/>
+   <p>Muebles</p>
+   </div>
+   </main>
   )
 }
