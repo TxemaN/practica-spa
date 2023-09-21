@@ -1,7 +1,4 @@
 
-
-import { logReducer } from '../reducer/logReducer'
-import { UserProvider } from '../../context/UserProvider';
 import { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
 
@@ -13,7 +10,7 @@ export const useFormulario = () => {
     
 
     const {state, setState}=useContext(UserContext)
-    console.log(state)
+
 
     const handleLogin = (userName) => {
 
@@ -32,7 +29,7 @@ export const useFormulario = () => {
 
        setState(
            {estado: 'logged-out',
-           userName
+           userName:""
         }
             );
 
@@ -47,7 +44,7 @@ export const useFormulario = () => {
 
 
     };
-    console.log(state)
+
 
     return {
         state,

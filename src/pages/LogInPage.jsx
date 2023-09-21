@@ -1,5 +1,6 @@
-import React from 'react'
-import { useFormulario } from '../auth/hooks/useFormulario'
+import React, { useContext } from 'react'
+import { useFormulario } from '../auth/hooks/useFormulario';
+
 
 export const LogInPage = () => {
 

@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Route, Routes, Navigate } from 'react-router-dom'
 import { CellPage, HomePage, LogInPage, MueblesPage, ProductPage } from "../pages"
+import { UserContext } from '../context/UserContext'
 
 
 
 export const AppRouter = () => {
-
-    const state = ''
+   
+    const {state} = useContext(UserContext)
+    const {estado} = state
     return (
 
 
-        state === 'logged-out' ? (
+        (estado === 'logged-out') ? (
 
             <Routes>
                 <Route path='login' element={<LogInPage />} />

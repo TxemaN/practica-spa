@@ -1,8 +1,11 @@
 import { dummyConsulta } from '../../helpers/dummyConsulta';
 
 export const getCategoria = async (categoria) => {
-    const urlBase = import.meta.env.VITE_APP_URL;
+    const urlBase = import.meta.env.VITE_APP_URL ;
+
     const urlCategoria = `${urlBase}/category/${categoria}`;
+
+
 
     const { data } = await dummyConsulta(urlCategoria);
     const { products } = data
