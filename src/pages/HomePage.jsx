@@ -1,10 +1,13 @@
 import React from 'react'
-import { NavBar } from '../components/NavBar'
+import { getProductById } from '../productos/helpers';
+
+// yarn
 
 export const HomePage = () => {
+  getProductById(2);
   return (
     <div>
-    <NavBar/>
+  {/* <NavBar/> */}
    <p>Home Page</p>
    </div>
   )
