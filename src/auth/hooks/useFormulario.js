@@ -1,43 +1,51 @@
-import React, { useReducer } from 'react';
-import {logReducer} from '../reducer/logReducer'
+
+
+import { logReducer } from '../reducer/logReducer'
+import { UserProvider } from '../../context/UserProvider';
+import { useContext } from 'react';
+import { UserContext } from '../../context/UserContext';
+
+
+
 export const useFormulario = () => {
-    const initialState = { estado: "logged-out", userName: "" }
-    const [state, dispatch] = useReducer(logReducer, initialState);
 
-    const handleLogin = (userName) => {  
-      
-        const newUser = {
-            estado: "logeado",
-            userName
-        };
 
-        const action = {
-            type: 'logged',
-            payload: newUser,
-        };
+    
 
-        dispatch(action);
+    const {state, setState}=useContext(UserContext)
+    console.log(state)
+
+    const handleLogin = (userName) => {
+
+       
+       setState (
+           {estado: 'logged',
+           userName
+        }
+          ) ;
+
+    
     };
 
-    const handleLogOut = () => {
-        const newUser = {
-            estado: "logged-out",
-            username: ""
-        };
+   const handleLogOut = () => {
+      
 
-        const action = {
-            type: 'logged-out',
-            payload: newUser,
-        };
+       setState(
+           {estado: 'logged-out',
+           userName
+        }
+            );
 
-        dispatch(action);
+       
     };
 
     const handleSubmit = (ev) => {
         ev.preventDefault();
         const userName = ev.target.nombre.value;
-        handleLogin(userName);  
-      
+        handleLogin(userName);
+       ev.target.nombre.value = ""
+
+
     };
     console.log(state)
 
