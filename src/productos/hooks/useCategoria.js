@@ -16,9 +16,9 @@ export const useCategoria = (categoria) => {
     };
 
     useEffect(() => {
-    
-      fetchCategoria();
+
+        fetchCategoria();
     }, [categoria]);
 
     return data;
-}
+};

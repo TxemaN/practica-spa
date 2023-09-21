@@ -4,10 +4,10 @@ import { NavBar } from '../components/NavBar';
 
 export const ProductPage = () => {
 
-  return(
-   <>
-  <NavBar/>
-  <PintarProducto />
-  </> 
-  )
+  return (
+    <>
+      <NavBar />
+      <PintarProducto />
+    </>
+  );
 };

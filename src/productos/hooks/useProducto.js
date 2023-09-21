@@ -22,4 +22,4 @@ export const useProducto = () => {
     };
 
     return { product, handleVolver };
-}
+};

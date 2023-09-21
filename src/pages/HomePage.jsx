@@ -1,14 +1,14 @@
-import React from 'react'
-import { NavBar } from '../components/NavBar'
+import React from 'react';
+import { NavBar } from '../components/NavBar';
 
 export const HomePage = () => {
   
   return (
-    <main>
-    <div>
+    
+    <>
     <NavBar/>
-   <p>Home</p>
-   </div>
-   </main>
-  )
-}
+   <h1 className='text-end'>Home</h1>
+   </>
+   
+  );
+};

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useProducto } from '../hooks/useProducto';
 
 export const PintarProducto = () => {
@@ -10,17 +10,17 @@ export const PintarProducto = () => {
 
     return (
         <section>
-            <h1>Producto - {category}</h1>
-            <button onClick={handleVolver}>Volver</button>
+            <h2 className='text-end'><strong>Top {category}</strong></h2>
             <article>
                 <div>
                     <img src={thumbnail} alt={title} />
                 </div>
-                <h2>{title}</h2>
+                <h1>{title}</h1>
                 <p>{description}</p>
-                <p>{price}$</p>
-                <p>{rating}</p>
+                <p><strong>{price}€</strong></p>
+                <p className='text-end h2'>{rating} ★</p>
             </article>
+            <button className='btn btn-dark' onClick={handleVolver}>Volver</button>
         </section>
     );
 };
