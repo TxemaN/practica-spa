@@ -3,7 +3,7 @@ import { getCategoria } from '../helpers/getCategoria';
 
 export const useCategoria = (categoria) => {
     const [data, setData] = useState({
-        products: [],
+        products: {},
         loading: true
     });
 
