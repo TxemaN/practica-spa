@@ -37,6 +37,7 @@ export const useFormulario = () => {
         ev.preventDefault();
         const userName = ev.target.nombre.value;
         handleLogin(userName);  
+        ev.target.nombre.value=""
       
     };
     console.log(state)
